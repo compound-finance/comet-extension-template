@@ -53,7 +53,7 @@ To run this in embedded mode (see Embedding below), you should run the following
 
 ```sh
 # in webb3/
-VITE_WEBB3_MAINNET_URL=http://localhost:8545 VITE_MY_EXTENSION_SOURCE=http://localhost:5183/embedded.html yarn dev
+VITE_WEBB3_MAINNET_URL=http://localhost:8545 VITE_EXTRA_EXTENSIONS=my_extension VITE_MY_EXTENSION_SOURCE=http://localhost:5183/embedded.html yarn dev
 ```
 
 ## Comet Extension Operator
@@ -117,7 +117,7 @@ Take a note of the port (it should be 5183). Then run Webb3 with the following e
 
 ```sh
 # in webb3/
-VITE_MY_EXTENSION_SOURCE=http://localhost:5183/embedded.html yarn dev
+VITE_EXTRA_EXTENSIONS=my_extension VITE_MY_EXTENSION_SOURCE=http://localhost:5183/embedded.html yarn dev
 ```
 
 When the extension loads at [http://localhost:5173](http://localhost:5173), it should load this local extension, instead of the production version.
@@ -126,7 +126,7 @@ If you are using the playground, you should also make sure Webb3 uses that URL f
 
 ```sh
 # in webb3/
-VITE_WEBB3_MAINNET_URL=http://localhost:8545 VITE_MY_EXTENSION_SOURCE=http://localhost:5183/embedded.html yarn dev
+VITE_WEBB3_MAINNET_URL=http://localhost:8545 VITE_EXTRA_EXTENSIONS=my_extension VITE_MY_EXTENSION_SOURCE=http://localhost:5183/embedded.html yarn dev
 ```
 
 ## Contributing
