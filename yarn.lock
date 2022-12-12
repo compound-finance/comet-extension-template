@@ -348,11 +348,12 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@compound-finance/comet-extension@^0.0.1-alpha2":
-  version "0.0.1-alpha2"
-  resolved "https://registry.yarnpkg.com/@compound-finance/comet-extension/-/comet-extension-0.0.1-alpha2.tgz#6f8686c90ae17a8a8372c27873733b15590616e7"
-  integrity sha512-DhnBhmj45yZioW8R9nvxxQQI4WBVb1kB6iIOBtP67/Ftp4P8sp/1bcjsOG/2Fp/933h9fvY5yQE1gAaHx9GkzQ==
+"@compound-finance/comet-extension@^0.0.5":
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/@compound-finance/comet-extension/-/comet-extension-0.0.5.tgz#6d752af83260dec0d12a9b4c2987e93ae833e3a9"
+  integrity sha512-2L7vAsHYstl+Qn8zzzTkYFOocbs+odEKCnSq4zmCuNyKcOrYl9dQ70xnsc5AOGvSTAu9vZv9kdnC6ajO0Bussw==
   dependencies:
+    "@ethersproject/abi" "^5.7.0"
     "@ethersproject/providers" "^5.7.1"
 
 "@esbuild-plugins/node-globals-polyfill@^0.1.1":
@@ -1948,9 +1949,9 @@ commander@2.18.0:
   version "0.0.0"
   resolved "https://github.com/compound-finance/compound-config.git#0815f079ebe6c7421361b3334f7b8eaab50722b0"
 
-"compound-styles@https://github.com/compound-finance/compound-styles.git#f922f4b7fdfaab4f2dc2d65f966397524107ae2d":
+"compound-styles@https://github.com/compound-finance/compound-styles.git#fc29b8a832c698920f2fcf7a06d978c4580a48e1":
   version "0.0.1"
-  resolved "https://github.com/compound-finance/compound-styles.git#f922f4b7fdfaab4f2dc2d65f966397524107ae2d"
+  resolved "https://github.com/compound-finance/compound-styles.git#fc29b8a832c698920f2fcf7a06d978c4580a48e1"
 
 concat-map@0.0.1:
   version "0.0.1"
