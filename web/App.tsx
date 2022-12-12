@@ -1,5 +1,5 @@
 import '../styles/main.scss';
-import { read, write, RPC } from '@compound-finance/comet-extension';
+import { RPC } from '@compound-finance/comet-extension';
 import { Fragment, useEffect, useMemo, useState } from 'react';
 import ERC20 from '../abis/ERC20';
 import Comet from '../abis/Comet';
