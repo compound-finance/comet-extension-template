@@ -64,6 +64,7 @@ export function App<N extends Network>({rpc, web3, account, networkConfig}: AppP
     extEnabled: false,
   });
   const [accountState, setAccountState] = useState<AccountState<Network>>(initialAccountState);
+  const [selectedMarketBaseAsset, setSelectedMarketBaseAsset] = useState<string>('N/A');
 
   const ext = useMemo(() => new Contract(networkConfig.extAddress, networkConfig.extAbi, signer), [signer]);
   const comet = useMemo(() => new Contract(networkConfig.rootsV3.comet, Comet, signer), [signer]);
@@ -79,6 +80,19 @@ export function App<N extends Network>({rpc, web3, account, networkConfig}: AppP
     await comet.allow(ext.address, false);
     console.log("disabling ext");
   }
+
+  useEffect(() => {
+    if (rpc) {
+      rpc.on({
+        setSelectedMarket: ({ selectedMarket }) => {
+          setSelectedMarketBaseAsset(selectedMarket.baseAssetSymbol);
+        }
+      });
+      rpc.sendRPC({ type: 'getSelectedMarket' }).then((data) =>
+        data.type === 'setSelectedMarket' && setSelectedMarketBaseAsset(data.selectedMarket.baseAssetSymbol)
+      );
+    }
+  }, [rpc]);
 
   return (
     <div className="page home">
@@ -108,6 +122,7 @@ export function App<N extends Network>({rpc, web3, account, networkConfig}: AppP
                 <label className="L1 label text-color--2">Debug Information</label>
                 <label className="label text-color--2">
                   network={ showNetwork(networkConfig.network) }<br/>
+                  market={ selectedMarketBaseAsset }<br/>
                   account={ account }<br/>
                 </label>
               </div>
